@@ -1,47 +1,32 @@
 class Position {
-    constructor(lat, lng, place) {
+    constructor(lat, lng, place, stateCode) {
         this.lat = lat
         this.lng = lng
         this.place = place
+        this.stateCode = stateCode
     }
 }
 
 class Sensor {
-    constructor(description, id, readonly, stateCode, value) {
+    constructor(description, id, lat, lng, place, readonly, stateCode, value) {
         this.description = description
         this.id = id
-        this.position = 
+        this.position = new Position(lat, lng, place, stateCode)
         this.readonly = readonly
-        this.stateCode = stateCode
         this.value = value
-        this.tags = []
-    }
-
-    addTag(tag) {
-        this.tags.push(tag)
     }
 }
 
 function JSONToSensor(jsonObject) {
-    const {
-        strSensor: description,
-        strId: id,
-        strReadonly: readonly,
-        strStateCode: stateCode,
-        strValue: value,
-        strTags
-    } = jsonObject
+    return new Sensor(
+        json.description,
+        json.id,
+        json.lat,
+        json.lng,
+        json.place,
+        json.readonly,
+        json.stateCode,
+        json.value
+    );
 
-    const sensor = new Sensor(description, id, readonly, stateCode, value)
-
-    if (strTags) {
-        const tags = strTags.split(",")
-
-        for (const tag of tags) {
-            sensor.addTag(tag)
-        }
-    }
-
-    console.log(sensor)
-    return sensor
 }

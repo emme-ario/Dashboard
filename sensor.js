@@ -17,7 +17,7 @@ class Sensor {
     }
 }
 
-function JSONToSensor(jsonObject) {
+function JSONToSensor(json) {
     return new Sensor(
         json.description,
         json.id,

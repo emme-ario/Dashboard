@@ -28,5 +28,4 @@ function JSONToSensor(json) {
         json.state_code,
         json.value
     );
-
 }

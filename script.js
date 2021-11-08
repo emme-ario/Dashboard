@@ -11,9 +11,9 @@ fetch("https://hf3xzw.deta.dev/")
         sensors.push(JSONToSensor(element))
     })
 
-    setVisible("sensor", true)
-    setVisible("position", true)
-    setVisible("value", true)
+    // setVisible("sensor", true)
+    // setVisible("position", true)
+    // setVisible("value", true)
 
     setContent("sensor-description", sensors[0].description)
     
@@ -25,6 +25,7 @@ fetch("https://hf3xzw.deta.dev/")
     setContent("sensor-value", sensors[0].value)
 })
 
+/*
 function setVisible(domId, visible) {
     let value = "none"
     
@@ -34,6 +35,7 @@ function setVisible(domId, visible) {
     
     document.getElementById(domId).style.display= value
 }
+*/
 
 function setContent(domId,content) {
     document.getElementById(domId).innerHTML = content 

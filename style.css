@@ -1,7 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #3f3752;
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.container .sensorBox {
+    position: relative;
+    width: 280px;
+    height: 250px;
+    background: #51446e;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .sensorBox .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--i);
+    transition: 0.7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.container .sensorBox:hover .icon {
+    top: 30px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.container .sensorBox .icon img {
+    width: 50px;
+    /* filter: invert(); */
+    transition: 1.5s;
+}
+
+.container .sensorBox:hover .icon img {
+    width: 40px;
+}
+
+.container .sensorBox .content {
+    position: relative;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+    z-index: 1;
+    transform: scale(0);
+    transition: 0.7s;
+}
+
+.container .sensorBox:hover .content {
+    transform: scale(1);
+}
+
+.container .sensorBox .content h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.container .sensorBox .content p {
+    font-weight: 300;
+    line-height: 1.5em;
 }

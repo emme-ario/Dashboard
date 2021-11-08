@@ -7,36 +7,128 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        
-    </header>
-    <section>
-        <div class="content">
-            <div id="sensor" style="display: none">
-                <h1 id="sensor-description">name</h1>
+    <div class="container">
+        <!-- Lampadina 1 -->
+        <div class="sensorBox">
+            <div class="icon" style="--i:#4eb7ff">
+                <img src="https://img.icons8.com/ios/50/000000/light.png"/>
+                <img src="https://img.icons8.com/ios/50/000000/light-on.png" style="display: none"/>
             </div>
-            <div id="position" style="display: none">
-                <h2>Position:</h2>
-                <p id="sensor-lat">lat</p>
-                <p id="sensor-lng">lng</p>
-                <p id="sensor-place">place</p>
-                <p id="sensor-state_code">stateCode</p>
-            </div>
-            <div id="value" style="display: none">
-                <h3>Value:</h3>
-                <p id="sensor-value">value</p>
+            <div class="content">
+                <h2>Lampadina</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est possimus et laboriosam illo aspernatur alias corrupti asperiores a commodi doloribus magni porro hic libero repudiandae, pariatur, nemo labore natus consequuntur!</p>
             </div>
         </div>
-    </section>
+        <!-- Lampadina 2 -->
+        <div class="sensorBox">
+            <div class="icon" style="--i:#fd6494">
+                <img src="https://img.icons8.com/ios/50/000000/light.png"/>
+                <img src="https://img.icons8.com/ios/50/000000/light-on.png" style="display: none"/>
+            </div>
+            <div class="content">
+                <h2>Lampadina</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est possimus et laboriosam illo aspernatur alias corrupti asperiores a commodi doloribus magni porro hic libero repudiandae, pariatur, nemo labore natus consequuntur!</p>
+            </div>
+        </div>
+        <!-- Allarme atomico -->
+        <div class="sensorBox">
+            <div class="icon" style="--i:#43f390">
+                <img src="https://img.icons8.com/ios/50/000000/nuclear.png"/>
+            </div>
+            <div class="content">
+                <h2>Allarme atomico</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est possimus et laboriosam illo aspernatur alias corrupti asperiores a commodi doloribus magni porro hic libero repudiandae, pariatur, nemo labore natus consequuntur!</p>
+            </div>
+        </div>
+        <!-- Porta aperta -->
+        <div class="sensorBox">
+            <div class="icon" style="--i:#cd57ff">
+                <img src="https://img.icons8.com/ios/50/000000/door-sensor-checked.png"/>
+            </div>
+            <div class="content">
+                <h2>Porta aperta</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est possimus et laboriosam illo aspernatur alias corrupti asperiores a commodi doloribus magni porro hic libero repudiandae, pariatur, nemo labore natus consequuntur!</p>
+            </div>
+        </div>
+        <!-- Sensore di temperatura -->
+        <div class="sensorBox">
+            <div class="icon" style="--i:#37ba82">
+                <img src="https://img.icons8.com/ios/50/000000/thermometer.png"/>
+            </div>
+            <div class="content">
+                <h2>Temperatura</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est possimus et laboriosam illo aspernatur alias corrupti asperiores a commodi doloribus magni porro hic libero repudiandae, pariatur, nemo labore natus consequuntur!</p>
+            </div>
+        </div>
+        <!-- Sensore di umidità -->
+        <div class="sensorBox">
+            <div class="icon" style="--i:#ffb508">
+                <img src="https://img.icons8.com/ios/50/000000/humidity.png"/>
+            </div>
+            <div class="content">
+                <h2>Umidità</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est possimus et laboriosam illo aspernatur alias corrupti asperiores a commodi doloribus magni porro hic libero repudiandae, pariatur, nemo labore natus consequuntur!</p>
+            </div>
+        </div>
+        <!-- Sensore di bellezza del codice -->
+        <div class="sensorBox">
+            <div class="icon" style="--i:#ff4747">
+                <img src="https://img.icons8.com/ios/50/000000/developer--v1.png"/>
+            </div>
+            <div class="content">
+                <h2>Codice</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est possimus et laboriosam illo aspernatur alias corrupti asperiores a commodi doloribus magni porro hic libero repudiandae, pariatur, nemo labore natus consequuntur!</p>
+            </div>
+        </div>
+        <!-- Sensore di luce -->
+        <div class="sensorBox">
+            <div class="icon" style="--i:#743dff">
+                <img src="https://img.icons8.com/ios/50/000000/sun--v1.png"/>
+            </div>
+            <div class="content">
+                <h2>Luce</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est possimus et laboriosam illo aspernatur alias corrupti asperiores a commodi doloribus magni porro hic libero repudiandae, pariatur, nemo labore natus consequuntur!</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!--
+        <div id="sensor" style="display: none">
+            <h1 id="sensor-description">name</h1>
+        </div>
+        <div id="position" style="display: none">
+            <h2>Position:</h2>
+            <p id="sensor-lat">lat</p>
+            <p id="sensor-lng">lng</p>
+            <p id="sensor-place">place</p>
+            <p id="sensor-state_code">stateCode</p>
+        </div>
+        <div id="value" style="display: none">
+            <h3>Value:</h3>
+            <p id="sensor-value">value</p>
+        </div>
 
+
+
+
+
+
+        <h2 id="sensor-description">name</h2>
+        <p id="sensor-lat">lat</p>
+        <p id="sensor-lng">lng</p>
+        <p id="sensor-place">place</p>
+        <p id="sensor-state_code">stateCode</p>
+        <p id="sensor-value">value</p>
+    -->
+
+    <!-- .js files reference -->
     <script src="sensor.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js"></script>    
 </body>
 </html>

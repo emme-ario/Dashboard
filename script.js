@@ -15,14 +15,14 @@ fetch("https://hf3xzw.deta.dev/")
     // setVisible("position", true)
     // setVisible("value", true)
 
-    // setContent("sensor-description", sensors[0].description)
+    setContent("sensor-description", sensors[0].description)
     
-    // setContent("sensor-lat", sensors[0].position.lat)
-    // setContent("sensor-lng", sensors[0].position.lng)
-    // setContent("sensor-place", sensors[0].position.place)
-    // setContent("sensor-state_code", sensors[0].position.state_code)
+    setContent("sensor-lat", sensors[0].position.lat)
+    setContent("sensor-lng", sensors[0].position.lng)
+    setContent("sensor-place", sensors[0].position.place)
+    setContent("sensor-state_code", sensors[0].position.state_code)
 
-    // setContent("sensor-value", sensors[0].value)
+    setContent("sensor-value", sensors[0].value)
 
     document.getElementById("light1").addEventListener("click", switchLight1)
     document.getElementById("light2").addEventListener("click", switchLight2)
@@ -45,9 +45,9 @@ function setVisible(domId, visible) {
 }
 */
 
-// function setContent(domId,content) {
-//     document.getElementById(domId).innerHTML = content 
-// }
+function setContent(domId,content) {
+    document.getElementById(domId).innerHTML = content 
+}
 
 function switchLight1() {
     const lightOn = "#4eb7ff"

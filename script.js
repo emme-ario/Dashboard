@@ -15,14 +15,18 @@ fetch("https://hf3xzw.deta.dev/")
     // setVisible("position", true)
     // setVisible("value", true)
 
-    setContent("sensor-description", sensors[0].description)
+    // setContent("sensor-description", sensors[0].description)
     
-    setContent("sensor-lat", sensors[0].position.lat)
-    setContent("sensor-lng", sensors[0].position.lng)
-    setContent("sensor-place", sensors[0].position.place)
-    setContent("sensor-state_code", sensors[0].position.state_code)
+    // setContent("sensor-lat", sensors[0].position.lat)
+    // setContent("sensor-lng", sensors[0].position.lng)
+    // setContent("sensor-place", sensors[0].position.place)
+    // setContent("sensor-state_code", sensors[0].position.state_code)
 
-    setContent("sensor-value", sensors[0].value)
+    // setContent("sensor-value", sensors[0].value)
+
+    document.getElementById("light1").addEventListener("click", switchLight)
+
+    // switchLights("light")
 })
 
 /*
@@ -33,10 +37,29 @@ function setVisible(domId, visible) {
         value = "block"
     }
     
-    document.getElementById(domId).style.display= value
+    document.getElementById(domId).style.display = value
 }
 */
 
-function setContent(domId,content) {
-    document.getElementById(domId).innerHTML = content 
+// function setContent(domId,content) {
+//     document.getElementById(domId).innerHTML = content 
+// }
+
+function switchLight() {
+    const lightOn = "#4eb7ff"
+    const lightOff = "#2f6e99"
+
+    let switchValue = false
+
+    if(!switchValue) {
+        document.getElementById("light1").style.background = lightOn
+        switchValue = true
+    }
+    
+    else if (switchValue) {
+        document.getElementById("light1").style.background = lightOff
+        switchValue = false
+    }
+    
+    console.log(switchValue)
 }

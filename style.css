@@ -86,7 +86,18 @@ body {
     margin-bottom: 5px;
 }
 
-.container .sensorBox .content p {
-    font-weight: 300;
-    line-height: 1.5em;
+.container .sensorBox .content a {
+    position: relative;    width: 130px;
+    line-height: 35px;
+    font-size: 0.9em;    
+    padding: 10px, 30px;
+    border-radius: 10px;
+    background: #3f3752;
+    color: #fff;
+    margin-top: 30px;
+    display: inline-block;
+    text-decoration: none;
+    user-select: none;
+    font-weight: 500;
+    box-shadow: 3px 3px rgb(43, 41, 41);
 }

@@ -1,6 +1,7 @@
 <!-- 
     LAYOUT IDEA:
-    cards with sensors -> click the card to toggle || display more informations
+    - cards with sensors -> click the card to toggle || display more informations
+    - popup filled with clicked sensor details
 -->
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@
             </div>
             <div class="content">
                 <h2>Lampadina</h2>
-                <a> More details... </a>
+                <a class="popup-toggle" onclick="togglePopup()"> More details... </a>
                 <!-- <p id="sensor-description-0"></p> -->
             </div>
         </div>
@@ -30,7 +31,7 @@
             </div>
             <div class="content">
                 <h2>Lampadina</h2>
-                <a> More details... </a>
+                <a class="popup-toggle" onclick="togglePopup()"> More details... </a>
             </div>
         </div>
         <!-- Allarme atomico -->
@@ -40,7 +41,7 @@
             </div>
             <div class="content">
                 <h2>Allarme atomico</h2>
-                <a> More details... </a>
+                <a class="popup-toggle" onclick="togglePopup()"> More details... </a>
             </div>
         </div>
         <!-- Porta aperta -->
@@ -50,7 +51,7 @@
             </div>
             <div class="content">
                 <h2>Porta aperta</h2>
-                <a> More details... </a>
+                <a class="popup-toggle" onclick="togglePopup()"> More details... </a>
             </div>
         </div>
         <!-- Sensore di temperatura -->
@@ -60,7 +61,7 @@
             </div>
             <div class="content">
                 <h2>Temperatura</h2>
-                <a> More details... </a>
+                <a class="popup-toggle" onclick="togglePopup()"> More details... </a>
             </div>
         </div>
         <!-- Sensore di umidità -->
@@ -70,7 +71,7 @@
             </div>
             <div class="content">
                 <h2>Umidità</h2>
-                <a> More details... </a>
+                <a class="popup-toggle" onclick="togglePopup()"> More details... </a>
             </div>
         </div>
         <!-- Sensore di bellezza del codice -->
@@ -80,7 +81,7 @@
             </div>
             <div class="content">
                 <h2>Codice</h2>
-                <a> More details... </a>
+                <a class="popup-toggle" onclick="togglePopup()"> More details... </a>
             </div>
         </div>
         <!-- Sensore di luce -->
@@ -90,9 +91,11 @@
             </div>
             <div class="content">
                 <h2>Luce</h2>
-                <a> More details... </a>
+                <a class="popup-toggle" onclick="togglePopup()"> More details... </a>
             </div>
         </div>
+        <!-- Pop-up con dettagli -->
+        <span id="popup" class="popup"></span>
     </div>
     
     
@@ -131,3 +134,11 @@
     <script src="script.js"></script>    
 </body>
 </html>
+
+
+
+
+
+
+
+

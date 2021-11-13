@@ -1,4 +1,3 @@
-
 fetch("https://hf3xzw.deta.dev/")
 .then(r => r.json())
 .then(body => {
@@ -12,41 +11,42 @@ fetch("https://hf3xzw.deta.dev/")
         sensors.push(JSONToSensor(element))
     })
 
-    // setVisible("sensor", true)
-    // setVisible("position", true)
-    // setVisible("value", true)
-
     for(let i = 0; i < 8; i++) {
-        console.log(sensors[i].description)
+        console.log(sensors[i].lat)
 
-        setContent("sensor-description-" + i, sensors[i].description)
-        
+        document.getElementById("popup").innerHTML = `
+                                                    <div class="popup-container">
+                                                    <h2>${sensors[i].description}</h2>
+                                                    <p>Position:</p>
+                                                    <p>${sensors[i].lat}</p>
+                                                    <p>${sensors[i].lng}</p>
+                                                    <p>${sensors[i].place}<p>
+                                                    <p>${sensors[i].state_code}</p>
+                                                    </div>
+                                                    `
     }
-
-    // document.getElementById("light1").addEventListener("click", switchLight1)
-    // document.getElementById("light2").addEventListener("click", switchLight2)
-    
-    // document.getElementById("light1Img").addEventListener("click", switchLight1Img)
-    // document.getElementById("light2Img").addEventListener("click", switchLight2Img)
-    
-    // switchLights("light")
 })
-
-/*
-function setVisible(id, visible) {
-    let value = "none"
-    
-    if(visible === true) {
-        value = "block"
-    }
-    
-    document.getElementById(domid).style.display = value
-}
-*/
 
 function setContent(id, content) {
     document.getElementById(id).innerHTML = content 
 }
+
+function togglePopup() {
+    let popup = document.getElementById("popup")
+    popup.classList.toggle("show")
+    console.log("toggle :D")
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

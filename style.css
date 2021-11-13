@@ -23,6 +23,7 @@ body {
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    z-index: 0;
 }
 
 .container .sensorBox {
@@ -87,7 +88,8 @@ body {
 }
 
 .container .sensorBox .content a {
-    position: relative;    width: 130px;
+    position: relative;    
+    width: 130px;
     line-height: 35px;
     font-size: 0.9em;    
     padding: 10px, 30px;
@@ -100,4 +102,42 @@ body {
     user-select: none;
     font-weight: 500;
     box-shadow: 3px 3px rgb(43, 41, 41);
+}
+
+.container .popup {
+    visibility: hidden;
+    width: 1000px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: #555;
+    color: #fff;
+    /* text-align: center; */
+    padding: 8px 0;
+    position: absolute;
+    z-index: 3;
+    box-shadow: 7px 7px rgba(43, 41, 41, 0.534);
+}
+
+.container .popup-container {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.popup-toggle {
+    cursor: pointer;
+}
+
+.popup.show {
+    visibility: visible;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

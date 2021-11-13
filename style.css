@@ -96,12 +96,13 @@ body {
     margin-bottom: 5px;
 }
 
-.container .sensorBox .content a {
+.container .sensorBox .content button {
     position: relative;    
     width: 130px;
     line-height: 35px;
     font-size: 0.9em;    
     padding: 10px, 30px;
+    border: none;
     border-radius: 10px;
     background: #3f3752;
     color: #fff;

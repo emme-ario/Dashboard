@@ -28,7 +28,7 @@ fetch("https://hf3xzw.deta.dev/")
 })
 
 function setContent(id, content) {
-    document.getElementById(id).innerHTML = content 
+    document.getElementById(id).innerHTML = content
 }
 
 function togglePopup() {

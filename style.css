@@ -68,13 +68,13 @@ body {
     width: 40px;
 }
 
-.container .sensorBox .icon.switch {
+.container .sensorBox .icon.switch1{
     background: #4eb7ff;
 }
-/*
-.container .sensorBox .icon.switch img {
-    
-}*/
+
+.container .sensorBox .icon.switch2{
+    background: #fd6494;
+}
 
 .container .sensorBox .content {
     position: relative;

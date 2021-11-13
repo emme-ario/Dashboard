@@ -3,8 +3,6 @@ fetch("https://hf3xzw.deta.dev/")
 .then(body => {
     console.log(body)
 
-    JSONToSensor(body)
-
     // Turns JSON into Array 
     const sensors = []
     body["sensors"].forEach(element => {
@@ -12,16 +10,16 @@ fetch("https://hf3xzw.deta.dev/")
     })
 
     for(let i = 0; i < 8; i++) {
-        console.log(sensors[i].lat)
+        console.log(sensors[i])
 
         document.getElementById("popup").innerHTML = `
                                                     <div class="popup-container">
                                                     <h2>${sensors[i].description}</h2>
                                                     <p>Position:</p>
-                                                    <p>${sensors[i].lat}</p>
-                                                    <p>${sensors[i].lng}</p>
-                                                    <p>${sensors[i].place}<p>
-                                                    <p>${sensors[i].state_code}</p>
+                                                    <p>${sensors[i].position.lat}</p>
+                                                    <p>${sensors[i].position.lng}</p>
+                                                    <p>${sensors[i].position.place}<p>
+                                                    <p>${sensors[i].position.state_code}</p>
                                                     </div>
                                                     `
     }
@@ -32,9 +30,14 @@ function setContent(id, content) {
 }
 
 function togglePopup() {
-    let popup = document.getElementById("popup")
+    const popup = document.getElementById("popup")
     popup.classList.toggle("show")
-    console.log("toggle :D")
+}
+
+function switchLight() {
+    const lightSwitch = document.getElementById("light-switch")
+    lightSwitch.classList.toggle("switch")
+    console.log("switch :D")
 }
 
 

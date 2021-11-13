@@ -47,6 +47,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 2;
+    cursor: pointer;
 }
 
 .container .sensorBox:hover .icon {
@@ -66,6 +67,14 @@ body {
 .container .sensorBox:hover .icon img {
     width: 40px;
 }
+
+.container .sensorBox .icon.switch {
+    background: #4eb7ff;
+}
+/*
+.container .sensorBox .icon.switch img {
+    
+}*/
 
 .container .sensorBox .content {
     position: relative;
@@ -102,6 +111,7 @@ body {
     user-select: none;
     font-weight: 500;
     box-shadow: 3px 3px rgb(43, 41, 41);
+    cursor: pointer;
 }
 
 .container .popup {
@@ -115,16 +125,7 @@ body {
     padding: 8px 0;
     position: absolute;
     z-index: 3;
-    box-shadow: 7px 7px rgba(43, 41, 41, 0.534);
-}
-
-.container .popup-container {
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-.popup-toggle {
-    cursor: pointer;
+    /* box-shadow: 7px 7px rgba(43, 41, 41, 0.534); */
 }
 
 .popup.show {
@@ -140,4 +141,9 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+.container .popup-container {
+    margin-top: 20px;
+    margin-left: 20px;
 }

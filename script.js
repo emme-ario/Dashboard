@@ -10,20 +10,23 @@ fetch("https://hf3xzw.deta.dev/")
     })
 
     for(let i = 0; i < 8; i++) {
-        console.log(sensors[i])
-
-        document.getElementById("popup").innerHTML = `
-                                                    <div class="popup-container">
-                                                        <h2>${sensors[i].description}</h2>
-                                                        <p>Position:</p>
-                                                        <p>${sensors[i].position.lat}</p>
-                                                        <p>${sensors[i].position.lng}</p>
-                                                        <p>${sensors[i].position.place}<p>
-                                                        <p>${sensors[i].position.state_code}</p>
-                                                        <h4>Value:</h4>
-                                                        <p>${sensors[i].value}</p>
-                                                    </div>
-                                                    `
+        // console.log(sensors[i])
+        
+        document.getElementById("details" + (i+1)).onclick = () => {
+            document.getElementById("popup").innerHTML = `
+                                                        <div class="popup-container">
+                                                            <h2>${sensors[i].description}</h2>
+                                                            <p>Position:</p>
+                                                            <p>${sensors[i].position.lat}</p>
+                                                            <p>${sensors[i].position.lng}</p>
+                                                            <p>${sensors[i].position.place}<p>
+                                                            <p>${sensors[i].position.state_code}</p>
+                                                            <h4>Value:</h4>
+                                                            <p>${sensors[i].value}</p>
+                                                        </div>
+                                                        `
+            togglePopup()
+        }
     }
 })
 
@@ -58,86 +61,3 @@ function switchLight2() {
     else
         document.getElementById("light-img2").src = lightOff
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function switchLight1() {
-    //     const lightOn = "#4eb7ff"
-//     const lightOff = "#2f6e99"
-
-//     let switchValue = false
-
-//     if(!switchValue) {
-//         document.getElementById("light1").style.background = lightOn
-//         // switchValue = true
-//     }
-    
-//     else if (switchValue) {
-//         document.getElementById("light1").style.background = lightOff
-//         // switchValue = false
-//     }    
-// }
-
-// function switchLight2() {
-//     const lightOn = "#fd6494"
-//     const lightOff = "#993d58"
-
-//     let switchValue = false
-
-//     if(!switchValue) {
-//         document.getElementById("light2").style.background = lightOn
-//         // switchValue = true
-//     }
-    
-//     else if (switchValue) {
-//         document.getElementById("light2").style.background = lightOff
-//         // switchValue = false
-//     }    
-// }
-
-// function switchLight1Img() {
-//     const lightOnSrc = "https://img.icons8.com/ios/50/000000/light-on.png"
-//     const lightOffSrc = "https://img.icons8.com/ios/50/000000/light.png"
-
-//     let switchValue = false
-
-//     if(!switchValue) {
-//         document.getElementById("light1Img").src = lightOnSrc
-//         // switchValue = true
-//     }
-    
-//     else if(switchValue) {
-//         document.getElementById("light1Img").src = lightOffSrc
-//         // switchValue = false
-//     }
-// }
-
-// function switchLight2Img() {
-//     const lightOnSrc = "https://img.icons8.com/ios/50/000000/light-on.png"
-//     const lightOffSrc = "https://img.icons8.com/ios/50/000000/light.png"
-
-//     let switchValue = false
-
-//     if(!switchValue) {
-//         document.getElementById("light2Img").src = lightOnSrc
-//         // switchValue = true
-//     }
-    
-//     else if(switchValue) {
-//         document.getElementById("light2Img").src = lightOffSrc
-//         // switchValue = false
-//     }
-// }

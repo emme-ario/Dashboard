@@ -15,23 +15,22 @@
     <div class="container">
         <!-- Lampadina 1 -->
         <div class="sensorBox">
-            <div id="light-switch1" class="icon" style="--i:#2f6e99" onclick="switchLight1()"> <!-- Color: Off: 2f6e99 / On: 4eb7ff -->
+            <div id="light-switch1" class="icon" style="--i:#2f6e99" onclick="switchLight1()"> <!-- Color: Off: #2f6e99 / On: #4eb7ff -->
                 <img id="light-img1" src="https://img.icons8.com/ios/50/000000/light.png"/>
             </div>
             <div class="content">
                 <h2>Lampadina</h2>
-                <button id="details1" onclick="togglePopup()"> More details... </button>
-                <!-- <p id="sensor-description-0"></p> -->
+                <button id="details1"> More details... </button>
             </div>
         </div>
         <!-- Lampadina 2 -->
         <div class="sensorBox">
-            <div id="light-switch2" class="icon" style="--i:#993d58" onclick="switchLight2()"> <!-- Color: Off: 993d58 / On: fd6494 -->
+            <div id="light-switch2" class="icon" style="--i:#993d58" onclick="switchLight2()"> <!-- Color: Off: #993d58 / On: #fd6494 -->
                 <img id="light-img2" src="https://img.icons8.com/ios/50/000000/light.png"/>
             </div>
             <div class="content">
                 <h2>Lampadina</h2>
-                <button class="popup-toggle" onclick="togglePopup()"> More details... </button>
+                <button id="details2"> More details... </button>
             </div>
         </div>
         <!-- Allarme atomico -->
@@ -41,7 +40,7 @@
             </div>
             <div class="content">
                 <h2>Allarme atomico</h2>
-                <button class="popup-toggle" onclick="togglePopup()"> More details... </button>
+                <button id="details3"> More details... </button>
             </div>
         </div>
         <!-- Porta aperta -->
@@ -51,7 +50,7 @@
             </div>
             <div class="content">
                 <h2>Porta aperta</h2>
-                <button class="popup-toggle" onclick="togglePopup()"> More details... </button>
+                <button id="details4"> More details... </button>
             </div>
         </div>
         <!-- Sensore di temperatura -->
@@ -61,7 +60,7 @@
             </div>
             <div class="content">
                 <h2>Temperatura</h2>
-                <button class="popup-toggle" onclick="togglePopup()"> More details... </button>
+                <button id="details5"> More details... </button>
             </div>
         </div>
         <!-- Sensore di umidità -->
@@ -71,7 +70,7 @@
             </div>
             <div class="content">
                 <h2>Umidità</h2>
-                <button class="popup-toggle" onclick="togglePopup()"> More details... </button>
+                <button id="details6"> More details... </button>
             </div>
         </div>
         <!-- Sensore di bellezza del codice -->
@@ -81,7 +80,7 @@
             </div>
             <div class="content">
                 <h2>Codice</h2>
-                <button class="popup-toggle" onclick="togglePopup()"> More details... </button>
+                <button id="details7"> More details... </button>
             </div>
         </div>
         <!-- Sensore di luce -->
@@ -91,7 +90,7 @@
             </div>
             <div class="content">
                 <h2>Luce</h2>
-                <button class="popup-toggle" onclick="togglePopup()"> More details... </button>
+                <button id="details8"> More details... </button>
             </div>
         </div>
         <!-- Pop-up con dettagli -->

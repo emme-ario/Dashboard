@@ -117,6 +117,10 @@ body {
 
 .container .popup {
     visibility: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
     width: 1000px;
     height: 400px;
     border-radius: 20px;
@@ -134,6 +138,7 @@ body {
     animation: fadeIn 1s;
 }
 
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -148,3 +153,25 @@ body {
     margin-top: 20px;
     margin-left: 20px;
 }
+
+.close-btn {
+    position: relative;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-left: 95%;
+    margin-top: 1%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    background: #f73838;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.close-btn img {
+    filter: invert();
+}
+

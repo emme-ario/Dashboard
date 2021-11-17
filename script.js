@@ -1,10 +1,11 @@
+const sensors = []
+
 fetch("https://hf3xzw.deta.dev/")
 .then(r => r.json())
 .then(body => {
     console.log(body)
 
     // Turns JSON into Array 
-    const sensors = []
     body["sensors"].forEach(element => {
         sensors.push(JSONToSensor(element))
     })
@@ -54,16 +55,14 @@ const lightOn = "https://img.icons8.com/ios/50/000000/light-on.png"
 
 function switchLight1() {
     const lightSwitch1 = document.getElementById("light1")
-    lightSwitch1.classList.toggle("switch1")    
+    lightSwitch1.classList.toggle("switch1")
 
-    if(document.getElementById("light-img1").src.match(lightOff)) {
+    if(document.getElementById("light-img1").src.match(lightOff))
         document.getElementById("light-img1").src = lightOn
-        //sensors[0].value = true // NOT WORKING
-    }
-    else {
+    else
         document.getElementById("light-img1").src = lightOff
-        //sensors[0].value = false // NOT WORKING
-    }
+    
+    toggleSensor()
 }
 
 function switchLight2() {
@@ -74,4 +73,11 @@ function switchLight2() {
         document.getElementById("light-img2").src = lightOn
     else
         document.getElementById("light-img2").src = lightOff
+
+    sensors[3].toggleSensor()
+}
+
+function printData() {
+    for(let i = 0; i < 8; i++)
+        console.log(sensors[i])
 }

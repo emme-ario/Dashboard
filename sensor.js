@@ -15,6 +15,13 @@ class Sensor {
         this.readonly = readonly
         this.value = value
     }
+
+    toggleSensor() {
+        fetch('https://hf3xzw.deta.dev/'+this.id+'/toggle', {method: 'PUT'})
+        .then(response => response.json())
+        // .then(result => {console.log('Success:', result)})
+        .catch(error => console.error('Error:', error))
+    }
 }
 
 function JSONToSensor(json) {

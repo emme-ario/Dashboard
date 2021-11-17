@@ -111,7 +111,7 @@ body {
     text-decoration: none;
     user-select: none;
     font-weight: 500;
-    box-shadow: 3px 3px rgb(43, 41, 41);
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
@@ -131,13 +131,14 @@ body {
     position: absolute;
     z-index: 3;
     /* box-shadow: 7px 7px rgba(43, 41, 41, 0.534); */
+    filter: blur();
 }
 
 .popup.show {
     visibility: visible;
     animation: fadeIn 1s;
+    
 }
-
 
 @keyframes fadeIn {
     0% {
@@ -174,4 +175,3 @@ body {
 .close-btn img {
     filter: invert();
 }
-

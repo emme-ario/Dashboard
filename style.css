@@ -124,20 +124,19 @@ body {
     width: 1000px;
     height: 400px;
     border-radius: 20px;
-    background-color: #555;
+    background: rgba(179, 177, 177, 0.5);
     color: #fff;
     /* text-align: center; */
     padding: 8px 0;
     position: absolute;
     z-index: 3;
     /* box-shadow: 7px 7px rgba(43, 41, 41, 0.534); */
-    filter: blur();
+    backdrop-filter: blur(10px);
 }
 
 .popup.show {
     visibility: visible;
     animation: fadeIn 1s;
-    
 }
 
 @keyframes fadeIn {

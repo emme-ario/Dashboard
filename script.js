@@ -23,9 +23,9 @@ fetch("https://hf3xzw.deta.dev/")
     // Fills the pop-up with sensors data
     for(let i = 0; i < 8; i++) {
         document.getElementById("details" + (i+1)).onclick = () => {
-            togglePopup()
+            openPopup()
             document.getElementById("popup").innerHTML = `
-                                                        <a id="close-btn" class="close-btn" onclick="togglePopup()"><img src="https://img.icons8.com/material/24/000000/multiply--v1.png"/></a>
+                                                        <canvas id="myChart" width="400" height="400"></canvas>
                                                         <div class="popup-container">
                                                             <h2>${sensors[i].description}</h2>
                                                             <p>Position:</p>
@@ -39,15 +39,23 @@ fetch("https://hf3xzw.deta.dev/")
                                                         `
         }
     }
+    document.getElementById("popup").onclick = () => {
+        closePopup()
+    }
 })
 
 function setContent(id, content) {
     document.getElementById(id).innerHTML = content
 }
 
-function togglePopup() {
+function openPopup() {
     const popup = document.getElementById("popup")
-    popup.classList.toggle("show")
+    popup.classList.add("show")
+}
+
+function closePopup() {
+    const popup = document.getElementById("popup")
+    popup.classList.remove("show")
 }
 
 const lightOff = "https://img.icons8.com/ios/50/000000/light.png"
@@ -62,7 +70,7 @@ function switchLight1() {
     else
         document.getElementById("light-img1").src = lightOff
     
-    toggleSensor()
+    sensors[0].toggleSensor()
 }
 
 function switchLight2() {
@@ -74,7 +82,7 @@ function switchLight2() {
     else
         document.getElementById("light-img2").src = lightOff
 
-    sensors[3].toggleSensor()
+    sensors[1].toggleSensor()
 }
 
 function printData() {

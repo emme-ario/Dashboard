@@ -24,8 +24,7 @@ fetch("https://hf3xzw.deta.dev/")
     for(let i = 0; i < 8; i++) {
         document.getElementById("details" + (i+1)).onclick = () => {
             openPopup()
-            document.getElementById("popup").innerHTML = `
-                                                        <canvas id="myChart" width="400" height="400"></canvas>
+            document.getElementById("popup").innerHTML =`
                                                         <div class="popup-container">
                                                             <h2>${sensors[i].description}</h2>
                                                             <p>Position:</p>
@@ -39,6 +38,16 @@ fetch("https://hf3xzw.deta.dev/")
                                                         `
         }
     }
+
+    document.getElementById("chartsBtn").onclick = () => {
+        openPopup()
+        document.getElementById("popup").innerHTML =`
+                                                    <canvas id="myChart" width="400" height="150"></canvas>
+                                                    `
+        initChart()
+    }
+
+
     document.getElementById("popup").onclick = () => {
         closePopup()
     }

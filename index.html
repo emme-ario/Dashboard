@@ -1,15 +1,9 @@
-<!-- 
-    LAYOUT IDEA:
-    - cards with sensors -> click the card to toggle || display more informations
-    - popup filled with clicked sensors details
--->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <head>
+        <meta charset="UTF-8">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="container">
@@ -94,11 +88,9 @@
             </div>
         </div>
         <!-- Pop-up con dettagli -->
-        <span id="popup" class="popup"> <!-- Content from script.js --> </span>
-        <canvas id="myChart" width="200" height="25"></canvas>
-        <button id="console.print" onclick="printData()">STAMPA DATI IN CONSOLE</button>
+        <span id="popup" class="popup"> <!-- Content from script.js --></span>
     </div>
-
+    <button id="chartsBtn" class="chartsBtn">DISPLAY CHART</button>
     <!-- .js files reference -->
     <script src="sensor.js"></script>
     <script src="script.js"></script>

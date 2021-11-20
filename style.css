@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
+    user-select: none;
 }
 
 body {
@@ -77,16 +78,20 @@ body {
     background: #fd6494;
 }
 
-/* .container .sensorBox .icon .bounce {
-    
+.container .sensorBox .icon.nuke {
+    animation: blink 2s infinite;
+    background: #ff2b2b;
 }
 
-@keyframes bounce {
+@keyframes blink {
     0% {
-        scale: ;
+        background: #c22525;
     }
-    
-} */
+
+    100% {
+        background: #43f390;
+    }
+}
 
 .container .sensorBox .content {
     position: relative;
@@ -132,7 +137,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 1000px;
     height: 400px;
     border-radius: 20px;
@@ -174,27 +179,6 @@ body {
     font-size: 1.2em;
 }
 
-.close-btn {
-    position: relative;
-    display: flex;
-    width: 30px;
-    height: 30px;
-    margin-left: 95%;
-    margin-top: 1%;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
-    background: #f73838;
-    font-size: 1.2em;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-.close-btn img {
-    filter: invert();
-}
-
 .chartsBtn {
     position: relative;    
     width: 300px;
@@ -212,4 +196,56 @@ body {
     font-weight: 700;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+}
+
+.gMaps {
+    border-radius: 20px; 
+    border: 1px;
+    width: 500px;
+    height: 350px;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+@media (max-width: 1250px) {
+    body {
+        padding: 50px;
+    }
+    
+    .container {
+        padding: 20px 200px;
+    }
+
+    .container .popup {
+        width: 800px;
+    }
+
+    .gMaps {
+        width: 300px;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 20px 400px;
+    }
+
+    .container .popup {
+        width: 400px;
+        height: 420px;
+        position: fixed;
+        top: 23%;
+        left: 18%;
+    }
+
+    .popup canvas {
+        position: absolute;
+        bottom: 35%;
+    }
+
+    .gMaps {
+        height: 150px;
+        width: 300px;
+        margin-left: 45px;
+    }
 }

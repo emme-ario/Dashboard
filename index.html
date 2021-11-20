@@ -30,7 +30,7 @@
         <!-- Allarme atomico -->
         <div class="sensorBox">
             <div class="icon" style="--i:#43f390">
-                <img src="https://img.icons8.com/ios/50/000000/nuclear.png"/>
+                <img class="bounce" src="https://img.icons8.com/ios/50/000000/nuclear.png"/>
             </div>
             <div class="content">
                 <h2>Allarme atomico</h2>
@@ -39,8 +39,8 @@
         </div>
         <!-- Porta aperta -->
         <div class="sensorBox">
-            <div class="icon" style="--i:#cd57ff">
-                <img src="https://img.icons8.com/ios/50/000000/door-sensor-checked.png"/>
+            <div id="door" class="icon" style="--i:#cd57ff">
+                <img id="door-img" src="https://img.icons8.com/ios/50/000000/door-closed.png"/>
             </div>
             <div class="content">
                 <h2>Porta aperta</h2>
@@ -91,11 +91,13 @@
         <span id="popup" class="popup"> <!-- Content from script.js --></span>
     </div>
     <button id="chartsBtn" class="chartsBtn">DISPLAY CHART</button>
+    <div id="map"></div>
     <!-- .js files reference -->
     <script src="sensor.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
     <script src="chart.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuJhH0SbMugrk2DJEwnxgbPVCnshUxUbw&callback=initMap&libraries=&v=weekly"></script>
 </body>
 </html>
 

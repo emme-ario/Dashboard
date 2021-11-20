@@ -69,13 +69,24 @@ body {
     width: 40px;
 }
 
-.container .sensorBox .icon.switch1{
+.container .sensorBox .icon.switch1 {
     background: #4eb7ff;
 }
 
-.container .sensorBox .icon.switch2{
+.container .sensorBox .icon.switch2 {
     background: #fd6494;
 }
+
+/* .container .sensorBox .icon .bounce {
+    
+}
+
+@keyframes bounce {
+    0% {
+        scale: ;
+    }
+    
+} */
 
 .container .sensorBox .content {
     position: relative;
@@ -153,6 +164,14 @@ body {
 .container .popup-container {
     margin-top: 20px;
     margin-left: 20px;
+}
+
+.popup-container h4 {
+    font-size: 1.3em;
+}
+
+.popup-container p {
+    font-size: 1.2em;
 }
 
 .close-btn {

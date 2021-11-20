@@ -1,47 +1,67 @@
-function initChart() {    
+function initChart(tv, hv, cv, lv) {  
     const ctx = document.getElementById('myChart').getContext('2d');
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-            datasets: [{
-                label: 'Description',
-                data: [12, 19, 3, 5, 2, 3, 45, 15, 0, 6],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
+            datasets: [ {
+                            label: 'Temperatura',
+                            data: tv,
+                            backgroundColor: '#37ba82',
+                            borderColor: '#37ba82',
+                            borderWidth: 3
+                        },
+
+                        {
+                            label: 'Umidità',
+                            data: hv,
+                            backgroundColor: '#ffb508',
+                            borderColor: '#ffb508',
+                            borderWidth: 3
+                        },
+
+                        {
+                            label: 'Codice',
+                            data: cv,
+                            backgroundColor: '#ff4747',
+                            borderColor: '#ff4747',
+                            borderWidth: 3
+                        },
+
+                        {
+                            label: 'Luce',
+                            data: lv,
+                            backgroundColor: '#743dff',
+                            borderColor: '#743dff',
+                            borderWidth: 3
+                        }
+            ]
         },
         options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+            lineTension: 0.6,
+            responsive: true,
+            interaction: {
+                mode: 'index',
+                intersect: false,
+            },
+            stacked: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Sensors trend'
                 }
             },
-
-            responsive: true
+            scales: {
+                y: {
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    
+                    ticks: {
+                        stepSize: 1
+                    }
+                },
+            },
         }
     });
 }

@@ -25,7 +25,7 @@ fetch("https://hf3xzw.deta.dev/")
         changeDoorState()
     }
     
-    let strigheMappe = [
+    let gMapsStrings = [
         '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.5374099798155!2d-88.6486029362001!3d46.08900277133453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb3bc56e5397ce22!2zNDbCsDA1JzMzLjgiTiA4OMKwMzgnMzIuNSJX!5e1!3m2!1sen!2sit!4v1637362075277!5m2!1sen!2sit" width="auto" height="100%" style="border-radius: 20px; border: 1px;" allowfullscreen=""  loading="lazy"></iframe>',
         '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.0722025302325!2d74.85630131496058!3d31.280919981449454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc3405b527e074817!2zMzHCsDE2JzUxLjMiTiA3NMKwNTEnMzAuNiJF!5e1!3m2!1sit!2sus!4v1637365133567!5m2!1sit!2sus" width="auto" height="100%" style="border-radius: 20px; border: 1px;" allowfullscreen="" loading="lazy"></iframe>',
         '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2545.9764696606876!2d32.61561131544983!3d46.65580997913303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf8254d0c44650ee2!2zNDbCsDM5JzIwLjkiTiAzMsKwMzcnMDQuMSJF!5e1!3m2!1sen!2sit!4v1637368819808!5m2!1sen!2sit" width="auto" height="100%" style="border-radius: 20px; border: 1px;" allowfullscreen="" loading="lazy"></iframe>',
@@ -49,9 +49,7 @@ fetch("https://hf3xzw.deta.dev/")
                                                             <p>${sensors[i].position.place}, ${sensors[i].position.state_code}<p>
                                                             <h4>Value: ${sensors[i].value}</h4>
                                                         </div>
-                                                        <div>
-                                                            ${strigheMappe[i]}
-                                                        </div>
+                                                        <div>${gMapsStrings[i]}</div>
                                                         `
         }
     }

@@ -2,7 +2,7 @@
 
 ## _Base per il progetto_
 
-Realizzare un progetto javascript di visualizzazìone dei dati che vengono forniti dall'api spiegata [qua](https://github.com/ProfAndreaPollini/python-iot-sim):
+Realizzare un progetto javascript di visualizzazìone dei dati che vengono forniti dall'api spiegata [qua](https://github.com/ProfAndreaPollini/python-iot-sim).
 
 Da presentare:
 

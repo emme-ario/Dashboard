@@ -217,7 +217,17 @@ body {
     }
 
     .container .popup {
-        width: 800px;
+        width: 650px;
+        position: fixed;
+        top: 23%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .popup canvas {
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
     }
 
     .gMaps {
@@ -235,12 +245,14 @@ body {
         height: 420px;
         position: fixed;
         top: 23%;
-        left: 18%;
+        left: 50%;
+        transform: translate(-50%);
     }
 
     .popup canvas {
         position: absolute;
-        bottom: 35%;
+        bottom: 50%;
+        transform: translateY(50%);
     }
 
     .gMaps {
